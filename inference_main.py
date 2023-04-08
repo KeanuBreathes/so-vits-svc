@@ -29,7 +29,7 @@ def main():
     parser.add_argument('-n', '--clean_names', type=str, nargs='+', default=["君の知らない物語-src.wav"], help='wav文件名列表，放在raw文件夹下')
     parser.add_argument('-t', '--trans', type=int, nargs='+', default=[0], help='音高调整，支持正负（半音）')
     parser.add_argument('-s', '--spk_list', type=str, nargs='+', default=['nen'], help='合成目标说话人名称')
-    parser.add_argument('-eh', '--enhance', type=str, nargs='+', default=True, help='是否使用NSF_HIFIGAN增强,默认使用')
+    parser.add_argument('-eh', '--enhance', type=bool, default=True, help='是否使用NSF_HIFIGAN增强,默认使用')
     
     # 可选项部分
     parser.add_argument('-a', '--auto_predict_f0', action='store_true', default=False,
